@@ -1,0 +1,266 @@
+/* Change Scroll Bar */
+
+html {
+    cursor: none;
+}
+
+body::-webkit-scrollbar{
+    background-color: #2e2e2e;
+    width: 10px;
+    padding: 1px 0;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #222222;
+    border-radius: 19px;
+}
+
+.dark{
+    background-color: #222222;
+}
+
+/* navbar */
+
+
+
+/* Nav button animation */
+
+.nav-button>span {
+    transform: rotateY(40deg);
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in;
+}
+
+.nav-button:hover>span {
+    opacity: 1;
+    /* width: fit-content !important; */
+    transform: rotateY(0deg);
+
+}
+
+@media screen and (min-width: 1024px) {
+    .react-tabs__tab {
+        padding: 0px 0px !important;
+    }
+    
+    .react-tabs__tab-list {
+        border-bottom: none !important;
+        margin: 0 0 !important;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        position: fixed;
+        right: 3%;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 998;
+    }
+    
+    .react-tabs__tab--selected {
+        background: none !important;
+        border-color: none !important;
+        border: none !important;
+    }
+
+    .react-tabs__tab--selected>button {
+        background-color: #ffb400 !important;
+    }
+
+    .react-tabs__tab--selected::after {
+        background: none !important;
+        border: none !important;
+        padding: none !important;
+    }
+
+    .hero-heading::before {
+        content: '';
+        height: 4px;
+        width: 50px;
+        background-color: #ffb400;
+        position: absolute;
+        left: 0;
+        top: 30px;
+    }
+
+}
+
+
+@media screen and (min-width:789px) {
+    .dashbelow::before {
+        content: '';
+        background-color: #333333;
+        height: 2px;
+        width: 40px;
+        position: absolute;
+        left: 0;
+        top: 5px;
+    }
+
+}
+.animate-top-cover {
+    animation: movebutton 1s ease-in forwards;
+}
+
+@keyframes movebutton {
+    from {
+        top: 0%
+    } 
+
+    to {
+        top: 100%;
+    }
+}
+
+.typinganimation {
+    white-space: pre-line;
+    display: block;
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 15px;
+}
+
+/* CSS for skill section */
+
+.skill {
+    width: 160px;
+    height: 160px;
+    position: relative;
+}
+
+.outer {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+circle {
+    fill: none;
+    stroke: #ffb400;
+    stroke-width: 20px;
+    stroke-dasharray: 435;
+    animation: anim 2s linear forwards;
+}
+
+.circlesvg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* About */
+
+.dashupper::after {
+    content: "+";
+    position: absolute;
+    top: 0;
+    font-size: 40px;
+    right: -35px;
+}
+
+/* CSS for form */
+
+.submit-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: translateX(100%);
+    background-color: #ffb400;
+    transition: all .3s ease-out;
+    cursor: pointer;
+    z-index: 11 !important;
+}
+
+.submit-btn:hover::before {
+    transform: translateX(0);
+}
+
+
+/* Hero heading skill */
+
+@media screen and (max-width:570px) {
+    .hero-heading::before {
+        display: none;
+    }
+
+    .typinganimation{
+        font-size: 8px;
+        line-height: 12px;
+    }
+}
+
+@media screen and (max-width:1024px) {
+
+    .nav-button>span {
+        display: none;
+    }
+
+    /* Css to change react tabs */
+
+
+    .react-tabs__tab {
+        display: inline !important;
+        width: fit-content !important;
+    }
+
+    .react-tabs__tab-list {
+        z-index: 998;
+        margin: 0 !important;
+        position: fixed !important;
+        display: flex !important;
+        flex-direction: row;
+        width: 100%;
+        left: 0;
+        bottom: -2px !important;
+        background: #fff;
+        transform: translate(0, 0);
+        height: fit-content;
+        justify-content: space-around;
+        border-bottom: none !important;
+        box-shadow: 0 0 47px #dedede
+    }
+
+    .react-tabs__tab--selected {
+        background: none !important;
+        border-color: none !important;
+        border: none !important;
+    }
+
+    .react-tabs__tab--selected>button {
+        background-color: #ffb400 !important;
+        /* color: rgba(255, 165, 0, 0.4); */
+    }
+
+    .react-tabs__tab--selected::after {
+        background: none !important;
+        border: none !important;
+        padding: none !important;
+    }
+
+    /* About section */
+} 
+
+@media screen and (max-width:1024px) {
+    .dark .react-tabs__tab-list {
+        background: #2a2b2b !important; /* Change this to the desired dark mode background color */
+        box-shadow: 0 0 0 rgba(0,0,0,0);
+    }
+}
