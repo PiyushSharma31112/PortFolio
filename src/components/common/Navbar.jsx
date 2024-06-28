@@ -22,12 +22,12 @@ const NavLinks = [
       label: "about"
     },
     {
-      id: 4,
+      id: 3,
       icon: <FaBriefcase />,
       label: "portfolio"
     },
     {
-      id: 1,
+      id: 4,
       icon: <FaEnvelopeOpen />,
       label: "contact"
     },

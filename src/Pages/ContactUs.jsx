@@ -1,33 +1,33 @@
 import React, { useState } from 'react'
 import PageHeading from "../components/common/PageHeading"
-import { FaEnvelopeOpen, FaFacebookF, FaInstagram, FaLinkedin, FaMap, FaTwitter } from "react-icons/fa"
+import { FaEnvelopeOpen, FaFacebookF, FaInstagram, FaLinkedin, FaMap, FaGithub } from "react-icons/fa"
 import { IoIosSend } from "react-icons/io"
 import { toast } from "react-toastify" 
 import emailjs from 'emailjs-com';
 
-
 const socialData = [
-  {
-    id: 1,
-    icon: <FaFacebookF />,
-    link: ""
-  },
-  {
-    id: 2,
-    icon: <FaTwitter />,
-    link: ""
-  },
-  {
-    id: 3,
-    icon: <FaInstagram />,
-    link: ""
-  },
-  {
-    id: 4,
-    icon: <FaLinkedin />,
-    link: ""
-  }
-]
+    {
+      id: 1,
+      icon: <FaFacebookF />,
+      link: 'https://www.facebook.com/share/8Zq6Pp325CGeqeYj/?mibextid=LQQJ4d '
+    },
+    {
+      id: 2,
+      icon: <FaInstagram />,
+      link: "https://www.instagram.com/its___piyush?igsh=MTczdXJxbGFsOXN0Zg%3D%3D&utm_source=qr"
+    },
+    {
+      id: 3,
+      icon: <FaLinkedin />,
+      link: "https://www.linkedin.com/in/piyush-sharma-233341275?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app "
+    },
+    {
+      id: 4,
+      icon: <FaGithub />,
+      link: "https://github.com/PyushSharma31112"
+    },
+  
+  ]  
 
 const InputFeild = ({ placeholder, value, onChange, name, error }) => {
   return (
@@ -144,15 +144,13 @@ const ContactUs = () => {
                 {/* Social Icons */}
 
                 <div className='flex gap-3'>
-                    {
-                        socialData.map(({ id, link, icon }) => {
-                            <button key={id} className='h-10 aspect-square bg-[#eeeeee] dark:bg-[#666666] dark:text-white hover:bg-primary-yellow hover:text-white text-[#666666] rounded-full flex items-center justify-center transition-all duration-500' >
-                                <a href={link}>
-                                    {icon}
-                                </a>
-                            </button>
-                        })
-                    }
+                        { socialData.map(({ icon, link, id }) => (
+                          <button key={id} className='h-10 aspect-square bg-[#eeeeee] dark:bg-[#666666] hover:bg-primary-yellow dark:text-white hover:text-white text-[#666666] flex justify-center duration-500 transition-all rounded-full items-center dark:hover:bg-primary-yellow'>
+                              <a href={link} target='_blank'>
+                                {icon}
+                              </a>
+                          </button>
+                        )) }                        
                 </div>
             </div>
             
