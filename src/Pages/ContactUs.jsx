@@ -159,7 +159,7 @@ const ContactUs = () => {
                       <div className='form-control'>
                            <InputFeild
                                placeholder={'YOUR NAME'}
-                               value={formData.name}
+                              //  value={formData.name}
                                onchange= {handleChange}
                                name="name"
                                error={errors.name}
@@ -168,7 +168,7 @@ const ContactUs = () => {
                       <div className='form-control'>
                             <InputFeild
                                 placeholder={'YOUR EMAIL'}
-                                value={formData.email}
+                                // value={formData.email}
                                 onchange= {handleChange}
                                 name = "email"
                                 error={errors.email}
@@ -178,7 +178,7 @@ const ContactUs = () => {
                       <div className='form-control lg:col-span-2'>
                             <InputFeild 
                                 placeholder={'YOUR SUBJECT'}
-                                value={formData.subject}
+                                // value={formData.subject}
                                 onchange = {handleChange}
                                 name="subject"
                                 error={errors.subject}
@@ -193,7 +193,7 @@ const ContactUs = () => {
                               rows="8"
                               className={`p-[11px_26px_11px_26px] transition-all duration-500 border focus:border-primary-yellow rounded-[30px] outline-none dark:bg-[#252525] text-black dark:text-white w-full ${errors.message ? "border-red-800" : "border-gray-400 dark:border-gray-700"}`}
                               placeholder='YOUR MESSAGE'
-                              value={formData.message}
+                              // value={formData.message}
                               onChange= {handleChange}
                           > 
                           </textarea>

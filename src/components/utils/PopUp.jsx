@@ -115,7 +115,7 @@ const PopUp = () => {
                     <div className='form-control'>
                         <InputField 
                             placeholder={"YOUR NAME"}
-                            value={formData.name}
+                           s value={formData.name}
                             onChange={handleChange}
                             name="name"
                             error={errors.name}
