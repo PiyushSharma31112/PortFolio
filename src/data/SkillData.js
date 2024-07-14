@@ -37,13 +37,13 @@ const SkillData = [
     },
     {
         id: 7,
-        label: "Express",
-        percentage: "5",
+        label: "SQL",
+        percentage: "80",
         duration: 300
     },
     {
         id: 8,
-        label: "node.js",
+        label: "next.js",
         percentage: "2",
         duration: 400
     }
