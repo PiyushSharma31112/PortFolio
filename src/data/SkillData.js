@@ -43,11 +43,10 @@ const SkillData = [
     },
     {
         id: 8,
-        label: "next.js",
-        percentage: "2",
+        label: "MongoDB",
+        percentage: "80",
         duration: 400
     }
-
 ]
 
 
