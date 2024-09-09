@@ -17,12 +17,12 @@ const PortfolioData = [
         thumbnail: "https://www.lifewire.com/thmb/XuBOb9AnIzEtx0dtV0QQylP8LSE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/003-The6BestWeatherAppsforiPhone-37d612cde23b49d8bba445223a1ae059.jpg",
         previewLink: "https://neon-cucurucho-ce0336.netlify.app"
     },
-    {
-        id: 4,
-        projectTitle: "Movie search App",
-        thumbnail: "https://devchallenges.io/_next/image?url=https%3A%2F%2Fcsyxkpbavpcrhwqhcpyy.supabase.co%2Fstorage%2Fv1%2Fobject%2Fpublic%2Fchallenges%2F40%2Fchallenge-40-thumbnail&w=1920&q=75",
-        previewLink: ""
-    }
+    // {
+    //     id: 4,
+    //     projectTitle: "Movie search App",
+    //     thumbnail: "https://devchallenges.io/_next/image?url=https%3A%2F%2Fcsyxkpbavpcrhwqhcpyy.supabase.co%2Fstorage%2Fv1%2Fobject%2Fpublic%2Fchallenges%2F40%2Fchallenge-40-thumbnail&w=1920&q=75",
+    //     previewLink: ""
+    // }
 ]
 
 export default PortfolioData
