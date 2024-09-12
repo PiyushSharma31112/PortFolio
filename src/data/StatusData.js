@@ -6,12 +6,12 @@ const StatusData = [
     },
     {
         id: 2,
-        number: 4,
+        number: 5,
         label: "completed projects"
     },
     {
         id: 3,
-        number: "10K",
+        number: "8K",
         label: "lines of code"
     }
 ]
