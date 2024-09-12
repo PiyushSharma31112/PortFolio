@@ -6,7 +6,7 @@ const StatusData = [
     },
     {
         id: 2,
-        number: 5,
+        number: 4,
         label: "completed projects"
     },
     {

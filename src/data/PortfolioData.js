@@ -17,12 +17,12 @@ const PortfolioData = [
         thumbnail: "https://www.lifewire.com/thmb/XuBOb9AnIzEtx0dtV0QQylP8LSE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/003-The6BestWeatherAppsforiPhone-37d612cde23b49d8bba445223a1ae059.jpg",
         previewLink: "https://neon-cucurucho-ce0336.netlify.app"
     },
-    {
-        id: 4,
-        projectTitle: "News App",
-        thumbnail: "https://img.freepik.com/free-vector/news-blog-banner-template_23-2148626511.jpg",
-        previewLink: "https://e-commerce31-12.netlify.app/"
-    },
+    // {
+    //     id: 4,
+    //     projectTitle: "News App",
+    //     thumbnail: "https://img.freepik.com/free-vector/news-blog-banner-template_23-2148626511.jpg",
+    //     previewLink: "https://e-commerce31-12.netlify.app/"
+    // },
 
 
     // {
