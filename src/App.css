@@ -203,6 +203,18 @@ circle {
         font-size: 8px;
         line-height: 12px;
     }
+
+    .main-text {
+        text-align: center;
+        font-size: 1.2rem;
+        line-height: 0;
+    }
+
+    .second-text {
+        text-align: center;
+        font-size: 2.5rem;
+        line-height: 0;
+    }
 }
 
 @media screen and (max-width:1024px) {
