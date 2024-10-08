@@ -13,6 +13,8 @@ import { RiLightbulbFlashLine } from "react-icons/ri"
 
 function App() {
     
+    // DarkMode and lightMode Theme
+
     const prefersDarkScheme = window.matchMedia("(prefers-colo-scheme: dark)").matches;
     const [darkMode, setDarkMode] = useState(prefersDarkScheme)
 
@@ -30,7 +32,7 @@ function App() {
         }
     }
 
-    // Apply initial dark mode setting 
+    // Apply initial light mode setting 
 
 
     if (darkMode) {
