@@ -70,12 +70,12 @@ const PopUp = () => {
             return
         }
 
-        emailjs.send('service_r1vw41k', 'template_nvypect', formData)
-            .then(function (response) {
-                console.log('SUCCESS!', response.status, response.text);
-            }, function (error) {
-                console.log('FAILED...', error);
-            });
+        // emailjs.send('service_r1vw41k', 'template_nvypect', formData)
+        //     .then(function (response) {
+        //         console.log('SUCCESS!', response.status, response.text);
+        //     }, function (error) {
+        //         console.log('FAILED...', error);
+        //     });
 
         setFormdata({
             name: '',
@@ -84,9 +84,15 @@ const PopUp = () => {
             message: ''
         })
 
+
         setErrors({})
 
         toast.success("Get back to you soon")
+        
+        console.log(formData.name)
+        console.log(formData.email)
+        console.log(formData.subject)
+        console.log(formData.message)
     }
 
       

@@ -10,6 +10,8 @@ import { Outlet } from 'react-router-dom'
 import Aosnit from './components/AosInit/Aosnit'
 
 function App() {
+
+    // const [light, setLight] = useState()
   
   return (
       <PopUpProvider>
@@ -32,7 +34,7 @@ function App() {
                     pauseOnFocusLoss
                     draggable
                     pauseOnHover
-                    theme='dark'              
+                    theme= 'dark'              
                 />
 
           </main>
