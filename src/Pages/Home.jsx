@@ -13,7 +13,7 @@ const Home = () => {
 
     useEffect(() => {
         const options = {
-          strings: ["frontend developer"],
+          strings: ["frontend developer", "Web designer"],
           typeSpeed: 70,
           loop: true,
           backSpeend: 50

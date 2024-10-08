@@ -105,6 +105,11 @@ const ContactUs = () => {
         setErrors({})
 
         toast.success("Get back to you soon")
+
+        console.log(formData.name)
+        console.log(formData.email)
+        console.log(formData.subject)
+        console.log(formData.message)
       }
       
   return (
