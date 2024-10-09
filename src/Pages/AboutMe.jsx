@@ -56,7 +56,7 @@ function AboutMe() {
                 <div className='grid grid-cols-2 gap-6'>
                     {
                       PersonalData.map(({ id, placeholder, answer })=>(
-                          <div className='text-[15px] font-medium' >
+                          <div className='text-[15px] font-medium' key={id} >
                             <span className='dark:text-white text-light-heading opacity-80 capitalize' > {placeholder}: </span>
                             <br  className='lg:hidden' />
                               {

@@ -42,7 +42,7 @@ const PersonalData = [
     {
         id: 9,
         placeholder: 'github',
-        answer: ''
+        answer: 'https://github.com/PiyushSharma31112'
     },
 ]
 
