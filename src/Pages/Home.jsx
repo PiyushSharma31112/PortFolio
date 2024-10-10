@@ -34,6 +34,7 @@ const Home = () => {
             <div className='z-10 max-w-[300px] md:max-w-[450px] relative lg:w-1/2 lg:h-1/2'>
                   <img src={laptop} alt="laptop-image" className='' />
                   <div className='codebox absolute w-[240px] md:w-[360px] left-1/2 top-[58px] md:top-[90px] h-[150px] md:h-[230px]  backdrop-blur-3xl p-2 bg-black dark:bg-transparent -translate-x-1/2 -z-10'>
+                  {/* <div className='codebox absolute top-36 left-1/2 md:top-[90px] transform -translate-x-1/2 w-[200px] md:w-[300px] lg:w-[320px] h-[120px] md:h-[180px] lg:h-[200px] backdrop-blur-xl p-3 bg-black rounded-lg shadow-lg -z-10'> */}
                       <TypeAnimation
                           sequence={[CodeBlock, 5000 ,""]}
                           repeat={Infinity}
