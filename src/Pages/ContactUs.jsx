@@ -14,7 +14,7 @@ const socialData = [
     {
       id: 2,
       icon: <FaInstagram />,
-      link: "https://www.instagram.com/its___piyush?igsh=MTczdXJxbGFsOXN0Zg%3D%3D&utm_source=qr"
+      link: "https://www.instagram.com/its_____piyush?igsh=MTczdXJxbGFsOXN0Zg%3D%3D&utm_source=qr"
     },
     {
       id: 3,
@@ -24,7 +24,7 @@ const socialData = [
     {
       id: 4,
       icon: <FaGithub />,
-      link: "https://github.com/PyushSharma31112"
+      link: "https://github.com/PiyushSharma31112"
     },
   
   ]  
