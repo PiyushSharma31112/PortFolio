@@ -23,15 +23,13 @@ const PortfolioData = [
         projectTitle: "Recipes finder",
         thumbnail: "https://i.ytimg.com/vi/J0HXmacNKaA/hqdefault.jpg",
         previewLink: "https://recipes-finder-app-31.netlify.app"
+    },
+    {
+        id: 6,
+        projectTitle: "Starbucks Clone",
+        thumbnail: "https://cdn.slidesharecdn.com/ss_thumbnails/b03e03df-d7c4-495b-b65d-07aa03b887eb-160217020616-thumbnail.jpg?width=640&height=640&fit=bounds",
+        previewLink: "https://starbuckcloneee31.netlify.app"
     }
-
-
-   // {
-    //     id: 5,
-    //     projectTitle: "Movie search App",
-    //     thumbnail: "https://devchallenges.io/_next/image?url=https%3A%2F%2Fcsyxkpbavpcrhwqhcpyy.supabase.co%2Fstorage%2Fv1%2Fobject%2Fpublic%2Fchallenges%2F40%2Fchallenge-40-thumbnail&w=1920&q=75",
-    //     previewLink: ""
-    // }
 
 
 ]
