@@ -46,7 +46,19 @@ const SkillData = [
         label: "MongoDB",
         percentage: "80",
         duration: 400
-    }
+    },
+    {
+        id: 9,
+        label: "Node.js",
+        percentage: "60",
+        duration: 100
+    },
+    {
+        id: 10,
+        label: "Github",
+        percentage: "70",
+        duration: 100
+    },
 ]
 
 
