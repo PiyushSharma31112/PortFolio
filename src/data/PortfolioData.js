@@ -24,12 +24,12 @@ const PortfolioData = [
         thumbnail: "https://i.ytimg.com/vi/J0HXmacNKaA/hqdefault.jpg",
         previewLink: "https://recipes-finder-app-31.netlify.app"
     },
-    {
-        id: 6,
-        projectTitle: "Starbucks Clone",
-        thumbnail: "https://cdn.slidesharecdn.com/ss_thumbnails/b03e03df-d7c4-495b-b65d-07aa03b887eb-160217020616-thumbnail.jpg?width=640&height=640&fit=bounds",
-        previewLink: "https://starbuckcloneee31.netlify.app"
-    }
+    // {
+    //     id: 6,
+    //     projectTitle: "Starbucks Clone",
+    //     thumbnail: "https://cdn.slidesharecdn.com/ss_thumbnails/b03e03df-d7c4-495b-b65d-07aa03b887eb-160217020616-thumbnail.jpg?width=640&height=640&fit=bounds",
+    //     previewLink: ""
+    // }
 
 
 ]

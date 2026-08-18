@@ -47,73 +47,96 @@ const InputFeild = ({ placeholder, value, onChange, name, error }) => {
 
 const ContactUs = () => {
 
-      const [formData, setFormData] = useState({
-          name: '',
-          email: '',
-          subject: '',
-          message: ''
-      })
-      
-      const [errors, setErrors] = useState({})
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+    })
 
-      const handleChange = (e) => {
+    const [errors, setErrors] = useState({})
+    const [isSubmitting, setIsSubmitting] = useState(false)
+
+    const handleChange = (e) => {
         const { name, value } = e.target
         setFormData({ ...formData, [name]: value })
-      }
+    }
 
-      const validateForm = () => {
-        const newErros = {}
+    const validateForm = () => {
+        const newErrors = {}
         const { name, email, subject, message } = formData
 
-        if (!name) newErros.name = "Name is required"
-        
-        if (!email) {
-            newErros.email = "Email is required"
-        } else if (!/\S+@\S+\.\S+/.test(email)) {
-            newErros.email = "Email adress is invalid"
-        } 
-        if (!subject) newErros.subject = 'Subject is required'
-        if (!message) newErros.message = 'Message is required'
-        
-        return newErros
-      }
+        if (!name.trim()) {
+            newErrors.name = "Name is required"
+        }
 
-      const submitForm = (e) => {
+        if (!email.trim()) {
+            newErrors.email = "Email is required"
+        } else if (!/\S+@\S+\.\S+/.test(email)) {
+            newErrors.email = "Email address is invalid"
+        }
+
+        if (!subject.trim()) {
+            newErrors.subject = "Subject is required"
+        }
+
+        if (!message.trim()) {
+            newErrors.message = "Message is required"
+        }
+
+        return newErrors
+    }
+
+    const submitForm = (e) => {
         e.preventDefault()
 
-        const newErros = validateForm()
-        if (Object.keys(newErros).length > 0) {
-            setErrors(newErros)
-            toast.error("All feild are mandatory")
+        const newErrors = validateForm()
+
+        if (Object.keys(newErrors).length > 0) {
+            setErrors(newErrors)
+            toast.error("All fields are mandatory")
             return
         }
 
-        emailjs.send("service_r1vw41k", "template_nvypect", formData)
-        .then(function(response) {
-            console.log('SUCESS!', response)
-        }, function(error) {
-            console.log('FAILED...', error)
-        });
+        setIsSubmitting(true)
 
-        setFormData({
-            name: "",
-            email: "",
-            subject: "",
-            message: ""
+        emailjs.send(
+            "service_nfvifp9",
+            "cxphl0s",
+            {
+                name: formData.name,
+                email: formData.email,
+                subject: formData.subject,
+                message: formData.message
+            },
+            "B648dWo8DNt14HKUb"
+        )
+        .then((response) => {
+            console.log("SUCCESS!", response.status, response.text)
+
+            toast.success("Message sent successfully!")
+
+            setFormData({
+                name: "",
+                email: "",
+                subject: "",
+                message: ""
+            })
+
+            setErrors({})
         })
+        .catch((error) => {
+            console.error("FAILED...", error)
+            toast.error("Something went wrong. Please try again.")
+        })
+        .finally(() => {
+            setIsSubmitting(false)
+        })
+    }
 
-        setErrors({})
 
-        toast.success("Get back to you soon")
-
-        console.log(formData.name)
-        console.log(formData.email)
-        console.log(formData.subject)
-        console.log(formData.message)
-      }
-      
-  return (
-    <section className='max-w-[1200px] mx-auto px-4 md:px-0 md:w-11/12 pb-20 lg:pb-0' data-aos = "fade-down" data-aos-duration = "1200">
+    return (
+         <section className='max-w-[1200px] mx-auto px-4 md:px-0 md:w-11/12 pb-20 lg:pb-0' data-aos = "fade-down" data-aos-duration = "1200">
         <PageHeading mainText={"Get in"} highLightedText={"touch"} secondText={"contact"} />
 
         <div className='flex gap-[60px] lg:flex-row flex-col'>
@@ -215,6 +238,8 @@ const ContactUs = () => {
             </div>
         </div>
     </section>
-  )
+    )
 }
+
+
 export default ContactUs

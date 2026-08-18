@@ -54,7 +54,7 @@ const Home = () => {
                 </h1>
 
                 <p className='text-[14px] leading-7 text-center md:text-left md:text-[16px] md:leading-9 text-gray-500 dark:text-gray-100'>
-                    I'm a Tunisian based web designer & front‑end developer focused on crafting clean & user‑friendly experiences, I am passionate about building excellent software that improves the lives of those around me.
+                    I’m a passionate web designer and front-end developer focused on creating clean, modern, and user-friendly digital experiences. I enjoy turning ideas into responsive, engaging websites and building high-quality software that delivers meaningful value and improves the lives of the people who use it.
                 </p>
 
                 <button className='uppercase cursor-pointer p-[16px_70px_16px_35px] w-fit text-[15px] bg-transparent border-2 border-primary-yellow dark:text-white text-gray-500 transition-all duration-500 hover:text-white font-semibold rounded-full overflow-hidden relative submit-btn' 

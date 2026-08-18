@@ -12,7 +12,7 @@ const PersonalData = [
     {
         id: 3,
         placeholder: "age",
-        answer: "19"
+        answer: "21"
     },
     {
         id: 4,

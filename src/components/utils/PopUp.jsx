@@ -1,3 +1,5 @@
+// export default PopUp
+
 import React, { useRef, useState } from 'react'
 import { IoIosSend } from "react-icons/io"
 import { FaX } from "react-icons/fa6"
@@ -36,6 +38,7 @@ const PopUp = () => {
     }) 
 
     const [errors, setErrors] = useState({})
+    const [isSubmitting, setIsSubmitting] = useState(false)
 
     const handleChange = (e) => {
 
@@ -47,65 +50,80 @@ const PopUp = () => {
           const newErrors = {}
           const { name, email, subject, message } = formData
 
-          if(!name) newErrors.name = "Name is Required"
+          if(!name.trim()) newErrors.name = "Name is Required"
 
-          if (!email) {
+          if (!email.trim()) {
               newErrors.email = "email is required"
           } else if (!/\S+@\S+\.\S+/.test(email)) {
             newErrors.email = "Email address is invalid"
           }
-          if(!subject) newErrors.subject = "Subject is required"
-          if(!message) newErrors.message = "Message is required"
+          if(!subject.trim()) newErrors.subject = "Subject is required"
+          if(!message.trim()) newErrors.message = "Message is required"
 
           return newErrors
       }
 
-      const submitForm = (e) => {
-        e.preventDefault()
-
-        const newErrors = validateForm()
-        if (Object.keys(newErrors).length > 0) {
-            setErrors(newErrors)
-            toast.error("All fields are mandatory")
-            return
-        }
-
-        // emailjs.send('service_r1vw41k', 'template_nvypect', formData)
-        //     .then(function (response) {
-        //         console.log('SUCCESS!', response.status, response.text);
-        //     }, function (error) {
-        //         console.log('FAILED...', error);
-        //     });
-
-        setFormdata({
-            name: '',
-            email: '',
-            subject: '',
-            message: ''
-        })
-
-
-        setErrors({})
-
-        toast.success("Get back to you soon")
+    const submitForm = (e) => {
+        e.preventDefault();
         
-        console.log(formData.name)
-        console.log(formData.email)
-        console.log(formData.subject)
-        console.log(formData.message)
-    }
+        const newErrors = validateForm();
+        
+        if (Object.keys(newErrors).length > 0) {
+            setErrors(newErrors);
+            toast.error("All fields are mandatory");
+            return;
+        }
+    
+        console.log("Sending form data:", formData);
+    
+        setIsSubmitting(true);
+    
+        emailjs.send(
+            "service_nfvifp9",
+            "cxphl0s",
+            {
+                name: formData.name,
+                email: formData.email,
+                subject: formData.subject,
+                message: formData.message
+            },
+            "B648dWo8DNt14HKUb"
+        )
+        .then((response) => {
+            console.log("EMAILJS SUCCESS:", response.status, response.text);
+        
+            toast.success("Message sent successfully!");
+        
+            setFormData({
+                name: "",
+                email: "",
+                subject: "",
+                message: ""
+            });
+        
+            setErrors({});
+        })
+        .catch((error) => {
+            console.error("EMAILJS ERROR:", error);
+        
+            toast.error("Email could not be sent");
+        })
+        .finally(() => {
+            setIsSubmitting(false);
+        });
+    };
 
       
-      const handleSectionClick = (event) => {
-          if (popupRef.current && !popupRef.current.contains(event.target)) {
-            toggleClose()
-          }
+    const handleSectionClick = (event) => {
+      if (popupRef.current && !popupRef.current.contains(event.target)) {
+        toggleClose()
       }
+    }
 
     return (
         <section 
             onClick={handleSectionClick}
-            className= {`fixed h-screen w-screen bg-[rgba(0,0,0,0.6) z-[999] top-0 left-0 items-center justify-center transition-all duration-500 p-5 ${close ? "hidden" : "flex"}`}
+            className= {`fixed h-screen w-screen bg-[rgba(0,0,0,0.6)] z-[999] top-0 left-0 items-center justify-center transition-all duration-500 p-5 ${close ? "hidden" : "flex"}`}
         >
             <div className='bg-[#111111] p-4 lg:p-8 rounded-lg border border-gray-800 popup relative' ref={popupRef}>
                 <button className='absolute top-2 right-2 border-2 rounded-full text-sm lg:text-2xl font-bold text-white p-1 lg:p-2 cutbutton' onClick={toggleClose}>
@@ -162,9 +180,9 @@ const PopUp = () => {
                         {errors.message && <p className='text-red-500 text-xs lg:text-sm absolute -bottom-3 lg:-bottom-4 left-2'> {errors.message} </p>}
                     </div>
                     
-                    <button type= "submit" className='uppercase cursor-pointer p-[16px_70px_16px_35px] w-fit text-[15px] bg-transparent border-2 border-primary-yellow dark:text-white text-gray-600 font-semibold rounded-full overflow-hidden relative submit-btn hover:text-white transition-all duration-500'>
+                    <button type= "submit" disabled={isSubmitting} className='uppercase cursor-pointer p-[16px_70px_16px_35px] w-fit text-[15px] bg-transparent border-2 border-primary-yellow dark:text-white text-gray-600 font-semibold rounded-full overflow-hidden relative submit-btn hover:text-white transition-all duration-500 disabled:opacity-50 disabled:cursor-not-allowed'>
                         <span className='z-20 relative' >
-                            send message
+                            {isSubmitting ? "sending..." : "send message"}
                         </span>
 
                         <span className='absolute z-20 -right-[1px] -top-[1px] flex items-center justify-center h-[55px] aspect-square bg-primary-yellow rounded-full text-[25px] text-white'>

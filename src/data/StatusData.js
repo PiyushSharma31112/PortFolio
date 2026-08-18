@@ -11,7 +11,7 @@ const StatusData = [
     },
     {
         id: 3,
-        number: "8K",
+        number: "10K",
         label: "lines of code"
     }
 ]

@@ -14,13 +14,13 @@ const SkillData = [
     {
         id: 3,
         label: "Javascript",
-        percentage: "70",
+        percentage: "85",
         duration: 300
     },
     {
         id: 4,
         label: "react.js",
-        percentage: 70,
+        percentage: "80",
         duration: 400
     },
     {
@@ -55,8 +55,20 @@ const SkillData = [
     },
     {
         id: 10,
-        label: "Github",
+        label: "Java",
         percentage: "70",
+        duration: 100
+    },
+    {
+        id: 11,
+        label: "Python",
+        percentage: "50",
+        duration: 100
+    },
+    {
+        id: 12,
+        label: "Github",
+        percentage: "80",
         duration: 100
     },
 ]
