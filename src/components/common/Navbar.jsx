@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
-import { FaHome, FaUser, FaBriefcase, FaEnvelopeOpen } from "react-icons/fa"
+import { FaHome, FaUser, FaBriefcase, FaEnvelopeOpen, FaCertificate } from "react-icons/fa"
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs"
 import 'react-tabs/style/react-tabs.css';
 import AboutMe from '../../Pages/AboutMe'
 import Home from '../../Pages/Home'
 import PortFolio from '../../Pages/PortFolio'
 import ContactUs from '../../Pages/ContactUs'
+import Certificates from '../../Pages/Certificates';
 import { Link, NavLink } from "react-router-dom"
-
 
 const NavLinks = [
     {
@@ -30,6 +30,12 @@ const NavLinks = [
       icon: <FaEnvelopeOpen />,
       label: "contact"
     },
+    {
+      id: 5,
+      icon: <FaCertificate />,
+      label: "Certificates"
+    },
+
 ]
 
 const Navbar = () =>  {
@@ -81,7 +87,11 @@ const Navbar = () =>  {
 
               <TabPanel>
                     <ContactUs />
-              </TabPanel>    
+              </TabPanel>
+
+              <TabPanel>
+                <Certificates />
+              </TabPanel>
           </Tabs>
 
         {/* <div className='flex flex-col w-[30%] justify-center h-screen gap-5 items-end navbar '>  
